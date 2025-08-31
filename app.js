@@ -7,4 +7,8 @@ function agregarAmigo() {
     if (nombreAmigo === '') {
         alert('Por favor, inserte un nombre.');
     }
+    amigos.push(nombreAmigo);
+    console.log(amigos);
+
 }
+
