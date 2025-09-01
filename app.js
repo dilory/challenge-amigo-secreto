@@ -22,6 +22,7 @@ function agregarAmigo() {
 
 function enlistarAmigo() {
     let amigoAgregado = document.getElementById('listaAmigos')
+    amigoAgregado.innerHTML = "";
 }
 
 function limpiarCaja(){
