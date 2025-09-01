@@ -11,11 +11,16 @@ function agregarAmigo() {
     console.log(nombreAmigo);
 
     if (nombreAmigo === '') {
-        alert('Por favor, inserte un nombre.');
+        alert('Por favor, agrega un nombre.');
     }
         amigos.push(nombreAmigo);
         console.log(amigos);
+        limpiarCaja();
 
+}
+
+function limpiarCaja(){
+    document.querySelector('#amigo').value = '';
 }
 
 asignarTextoElemento('h1', '!Amigo Secreto!');
