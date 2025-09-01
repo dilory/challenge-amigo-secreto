@@ -12,11 +12,16 @@ function agregarAmigo() {
 
     if (nombreAmigo === '') {
         alert('Por favor, agrega un nombre.');
-    }
+    } else {
         amigos.push(nombreAmigo);
         console.log(amigos);
         limpiarCaja();
+    }
 
+}
+
+function enlistarAmigo() {
+    let amigoAgregado = document.getElementById('listaAmigos')
 }
 
 function limpiarCaja(){
