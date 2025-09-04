@@ -16,6 +16,7 @@ function agregarAmigo() {
         amigos.push(nombreAmigo);
         console.log(amigos);
         limpiarCaja();
+        enlistarAmigo();
     }
 
 }
@@ -23,6 +24,12 @@ function agregarAmigo() {
 function enlistarAmigo() {
     let amigoAgregado = document.getElementById('listaAmigos')
     amigoAgregado.innerHTML = "";
+
+    for (let i = 0; i < amigos.length; i++){
+        let lista = document.createElement('li');
+        lista.textContent = amigos[i];
+        amigoAgregado.appendChild(lista);
+    }
 }
 
 function limpiarCaja(){
