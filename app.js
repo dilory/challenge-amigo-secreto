@@ -8,7 +8,7 @@ function asignarTextoElemento(elemento, texto) {
 
 function agregarAmigo() {
     let nombreAmigo = document.getElementById('amigo').value.trim();
-    console.log(nombreAmigo);
+    // console.log(nombreAmigo);
     // obtiene el elemento del HTML, trim para evitar que quede el campo vacío
 
     if (nombreAmigo === '') {
@@ -43,6 +43,11 @@ function sortearAmigo(){
         alert("No hay amigos disponibles para sortear");
         return; // return para que se detenga la funcion aquí antes del random draw
     }
+    let nombreAleatorio = Math.floor(Math.random() * amigos.length); //obtener un nombre aleatorio
+    let amigoSorteado = amigos[nombreAleatorio];
+    let ganador = document.getElementById('resultado');
+    ganador.innerHTML = `<li>${amigoSorteado}<li>`; //para que finalmente se muestre el nombre en la pagina
+    console.log("Amigo Ganador:", amigoSorteado);
 }
 
 function limpiarCaja(){
